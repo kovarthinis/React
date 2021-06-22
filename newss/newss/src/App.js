@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Select from './components/select';
+import ArticleListItem from "./components/articleListItem";
+import BookMarks from "./components/bookMarks";
+
 
 class App extends Component {
   constructor(props) {
@@ -21,7 +24,7 @@ class App extends Component {
 
         });
       });
-   
+
   }
 
   render() {
@@ -32,9 +35,9 @@ class App extends Component {
     //   </div>
     // ) 
     return (
-     
+
       <div className="App">
-        
+
         {this.state.articles.map((item, index) => {
           return (
             <div>
@@ -42,15 +45,15 @@ class App extends Component {
                 {item.title}
               </h2>
               <b>{item.Author}</b>
-              <img src={item.urlToImage} style={{ width: '50vw' }} /> 
-              <a href ={item.url}> Read More</a>
+              <img src={item.urlToImage} style={{ width: '50vw' }} />
+              <a href={item.url}> Read More</a>
               <p>
                 {item.content}
               </p>
-               </div>
-             
+            </div>
+
           );
-          
+
         })
         }
       </div>
