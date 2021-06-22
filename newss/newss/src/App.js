@@ -4,7 +4,6 @@ import Select from './components/select';
 import ArticleListItem from "./components/articleListItem";
 import BookMarks from "./components/bookMarks";
 
-
 class App extends Component {
   constructor(props) {
     super(props);
